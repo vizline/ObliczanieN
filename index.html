@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="v2.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -18,37 +19,20 @@
     <nav id="main-nav" aria-label="Główna nawigacja">
       <a href="#/podstawy">I. Podstawy</a>
       <a href="#/praktyka">II. Praktyka</a>
-      <a class="nav-cta" href="#/praktyka/procedura">Zaplanuj badanie →</a>
+      <a class="nav-cta" href="#/praktyka">Wybierz analizę →</a>
     </nav>
   </header>
 
   <main id="main" tabindex="-1">
     <section class="hero route" data-route="start">
       <div class="eyebrow">Przewodnik po analizie mocy · 2026</div>
-      <div class="hero-grid">
-        <div>
-          <h1>Ile osób<br>naprawdę<br>potrzebujesz?</h1>
-          <p class="lead">Liczebność próby nie jest liczbą „zwyczajowo przyjętą”. To decyzja wynikająca z hipotezy, testu, interesującego efektu i ryzyka, które akceptujesz.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#/podstawy">Zrozum podstawy</a>
-            <a class="button" href="#/praktyka/procedura">Przejdź krok po kroku</a>
-          </div>
-        </div>
-        <div class="power-figure" role="img" aria-label="Większa próba zwiększa szansę wykrycia rzeczywistego efektu">
-          <div class="figure-label">SZANSA WYKRYCIA EFEKTU</div>
-          <div class="bars"><i style="--h:24%"></i><i style="--h:36%"></i><i style="--h:52%"></i><i style="--h:68%"></i><i style="--h:82%"></i><i style="--h:92%"></i></div>
-          <div class="axis"><span>małe N</span><span>większe N</span></div>
-          <div class="figure-note"><strong>Nie zgaduj N.</strong><span>Zaprojektuj szansę na rozstrzygający wynik.</span></div>
-        </div>
-      </div>
-      <div class="case-strip">
-        <span class="mono">PRZYKŁAD</span>
-        <p><strong>r = −0,21 · N = 60 · p = 0,107</strong></p>
-        <p>Brak istotności nie dowodzi braku związku. Dla efektu |r| ≈ 0,20 taka próba miała tylko ok. <strong>33% mocy</strong>.</p>
+      <div class="home-intro">
+        <h1>Ile osób<br>naprawdę<br>potrzebujesz?</h1>
+        <div><p class="lead">Przystępny przewodnik po analizie mocy i świadomym planowaniu liczebności próby — od pierwszej hipotezy do gotowego raportu.</p><p class="authors">Na podstawie podręcznika<br><strong>Michał Zięba &amp; Mariusz Zięba</strong></p></div>
       </div>
       <div class="chapter-cards">
-        <a href="#/podstawy"><span>01</span><h2>Podstawy / pojęcia</h2><p>Po co analizować moc, co znaczą α, β i wielkość efektu oraz jak unikać typowych błędów.</p><b>Wejdź do części I →</b></a>
-        <a href="#/praktyka"><span>02</span><h2>Praktyka</h2><p>Od hipotezy do raportu: wybór testu, parametry, narzędzia i kompletne przykłady analiz.</p><b>Wejdź do części II →</b></a>
+        <a href="#/podstawy"><span>01 · TEORIA</span><h2>Zrozum!</h2><p>Po co analizować moc, co znaczą α, β i wielkość efektu oraz jak unikać typowych błędów.</p><b>Przejdź do części I →</b></a>
+        <a href="#/praktyka"><span>02 · ZASTOSOWANIE</span><h2>Praktyka</h2><p>Wybierz swój schemat badania i przejdź jego własną ścieżkę: założenia, program, przykład i raport.</p><b>Wybierz analizę →</b></a>
       </div>
     </section>
 
@@ -68,26 +52,16 @@
     </section>
 
     <section class="route" data-route="praktyka">
-      <div class="section-hero inverse"><div><span class="kicker">Część II</span><h1>Od hipotezy<br>do liczby N</h1></div><p>Procedura dla studentów i prowadzących — z decyzjami, które trzeba zapisać, oraz gotowymi przykładami raportowania.</p></div>
-      <div class="audience-switch" role="group" aria-label="Wybierz perspektywę"><button class="active" data-audience="student">Dla studentów</button><button data-audience="teacher">Dla prowadzących</button></div>
-      <div id="audience-note" class="audience-note"></div>
-      <article id="procedura" class="content-block"><header><span>01</span><h2>Procedura krok po kroku</h2></header><div class="steps">
-        <section><i>1</i><div><h3>Sformułuj hipotezę</h3><p>Wskaż główny efekt i test, który go sprawdzi. Oddziel analizy konfirmacyjne od eksploracyjnych.</p></div></section>
-        <section><i>2</i><div><h3>Uzasadnij <a class="term" data-term="efekt" href="#/podstawy/definicje">wielkość efektu</a></h3><p>Użyj metaanalizy, podobnych badań lub SESOI. Zapisz źródło i tok rozumowania.</p></div></section>
-        <section><i>3</i><div><h3>Ustal parametry</h3><p>Określ <a class="term" data-term="alfa" href="#/podstawy/definicje">poziom α</a>, docelową <a class="term" data-term="moc" href="#/podstawy/definicje">moc testu</a>, kierunek testu, liczby grup/predyktorów i ewentualną korektę wielokrotnego testowania.</p></div></section>
-        <section><i>4</i><div><h3>Dobierz narzędzie i policz N</h3><p>Upewnij się, że opcja kalkulatora odpowiada dokładnie późniejszej analizie. Policz N osobno dla każdej głównej hipotezy.</p></div></section>
-        <section><i>5</i><div><h3>Wybierz najbardziej wymagający wariant</h3><p>Badanie powinno zapewniać moc hipotezie wymagającej największej próby — nie tej najłatwiejszej.</p></div></section>
-        <section><i>6</i><div><h3>Dodaj uzasadniony zapas</h3><p>Przy przewidywanej utracie u, rekrutuj <span class="formula">N<sub>rekrutacja</sub> = N / (1 − u)</span>. Dla N = 200 i utraty 15%: 236 osób, nie 230.</p></div></section>
-        <section><i>7</i><div><h3>Zapisz i zaraportuj</h3><p>Podaj program i wersję, typ analizy, efekt z uzasadnieniem, α, moc, parametry testu, wynikowe N oraz założony zapas.</p></div></section>
-      </div></article>
-      <article class="content-block"><header><span>02</span><h2>Mapa schematów</h2></header><div class="schema-grid"><button data-schema="corr"><b>Korelacja</b><span>Dwie zmienne ciągłe</span></button><button data-schema="tind"><b>Test t niezależny</b><span>Dwie różne grupy</span></button><button data-schema="tdep"><b>Test t zależny</b><span>Dwa pomiary tych samych osób</span></button><button data-schema="anova"><b>ANOVA</b><span>Trzy lub więcej średnich</span></button><button data-schema="reg"><b>Regresja</b><span>Model lub przyrost R²</span></button><button data-schema="mod"><b>Moderacja</b><span>Interakcja X × W</span></button><button data-schema="med"><b>Mediacja</b><span>Efekt pośredni a × b</span></button><button data-schema="sem"><b>SEM</b><span>Ścieżka lub dopasowanie</span></button></div><div id="schema-detail" class="schema-detail" aria-live="polite"></div></article>
-      <article class="content-block calculator"><header><span>03</span><h2>Szybki kalkulator orientacyjny</h2></header><div class="calc-grid"><div><label>Typ analizy<select id="calc-type"><option value="corr">Korelacja Pearsona</option><option value="t">Test t, dwie równe grupy</option></select></label><label>Zakładany efekt<input id="effect" type="number" min="0.01" max="0.99" step="0.01" value="0.20"><small id="effect-hint">|r|</small></label><label>Poziom α<input id="alpha" type="number" min="0.001" max="0.20" step="0.001" value="0.05"></label><label>Docelowa moc<select id="power"><option value="0.80">0,80</option><option value="0.90" selected>0,90</option><option value="0.95">0,95</option></select></label><button class="button primary" id="calculate">Oblicz orientacyjne N</button></div><div class="result"><span>Wymagana próba</span><strong id="calc-result">258</strong><p id="calc-caption">osób łącznie · test dwustronny</p><small>Wynik przybliżony. Ostateczną wartość sprawdź w G*Power lub innym narzędziu odpowiadającym analizie.</small></div></article>
-      <article class="content-block examples"><header><span>04</span><h2>Przykłady gotowych analiz</h2></header><div class="example-tabs"><button class="active" data-example="corr">Korelacja</button><button data-example="groups">Dwie grupy</button><button data-example="reg">Regresja</button><button data-example="sens">Wrażliwość</button></div><div id="example-content"></div></article>
-      <article class="content-block checklist"><header><span>05</span><h2>Lista kontrolna przed rekrutacją</h2></header><div id="checklist-items"></div><button class="text-button" id="reset-checklist">Wyczyść zaznaczenia</button></article>
+      <div id="practice-index">
+        <div class="section-hero inverse"><div><span class="kicker">Część II</span><h1>Wybierz<br>analizę</h1></div><p>Każdy schemat ma własną podstronę, parametry i pułapki. Wybierz test odpowiadający Twojej głównej hipotezie.</p></div>
+        <article class="analysis-catalog" id="analysis-catalog"></article>
+      </div>
+      <article id="analysis-page" class="analysis-page" hidden></article>
     </section>
   </main>
-  <footer><a class="brand" href="#/start"><span class="brand-mark">N</span><span>Obliczanie N</span></a><p>Prototyp edukacyjny na podstawie poradnika „Jak duża powinna być moja próba?” (2026).</p><a href="#/podstawy/nie-rob">Zasady odpowiedzialnego planowania ↑</a></footer>
+  <footer><a class="brand" href="#/start"><span class="brand-mark">N</span><span>Obliczanie N</span></a><p>Na podstawie poradnika „Jak duża powinna być moja próba?” (2026)<br><strong>Michał Zięba &amp; Mariusz Zięba</strong></p><a href="#/podstawy/nie-rob">Zasady odpowiedzialnego planowania ↑</a></footer>
   <div id="tooltip" role="tooltip" hidden></div>
+  <script src="analysis-data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
