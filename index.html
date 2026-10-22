@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Przystępny przewodnik po analizie mocy i planowaniu liczebności próby w badaniach psychologicznych.">
+  <title>Obliczanie N — analiza mocy bez zgadywania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <a class="brand" href="#/start" aria-label="Obliczanie N — strona główna"><span class="brand-mark">N</span><span>Obliczanie N</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" aria-label="Główna nawigacja">
+      <a href="#/podstawy">I. Podstawy</a>
+      <a href="#/praktyka">II. Praktyka</a>
+      <a class="nav-cta" href="#/praktyka/procedura">Zaplanuj badanie →</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero route" data-route="start">
+      <div class="eyebrow">Przewodnik po analizie mocy · 2026</div>
+      <div class="hero-grid">
+        <div>
+          <h1>Ile osób<br>naprawdę<br>potrzebujesz?</h1>
+          <p class="lead">Liczebność próby nie jest liczbą „zwyczajowo przyjętą”. To decyzja wynikająca z hipotezy, testu, interesującego efektu i ryzyka, które akceptujesz.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#/podstawy">Zrozum podstawy</a>
+            <a class="button" href="#/praktyka/procedura">Przejdź krok po kroku</a>
+          </div>
+        </div>
+        <div class="power-figure" role="img" aria-label="Większa próba zwiększa szansę wykrycia rzeczywistego efektu">
+          <div class="figure-label">SZANSA WYKRYCIA EFEKTU</div>
+          <div class="bars"><i style="--h:24%"></i><i style="--h:36%"></i><i style="--h:52%"></i><i style="--h:68%"></i><i style="--h:82%"></i><i style="--h:92%"></i></div>
+          <div class="axis"><span>małe N</span><span>większe N</span></div>
+          <div class="figure-note"><strong>Nie zgaduj N.</strong><span>Zaprojektuj szansę na rozstrzygający wynik.</span></div>
+        </div>
+      </div>
+      <div class="case-strip">
+        <span class="mono">PRZYKŁAD</span>
+        <p><strong>r = −0,21 · N = 60 · p = 0,107</strong></p>
+        <p>Brak istotności nie dowodzi braku związku. Dla efektu |r| ≈ 0,20 taka próba miała tylko ok. <strong>33% mocy</strong>.</p>
+      </div>
+      <div class="chapter-cards">
+        <a href="#/podstawy"><span>01</span><h2>Podstawy / pojęcia</h2><p>Po co analizować moc, co znaczą α, β i wielkość efektu oraz jak unikać typowych błędów.</p><b>Wejdź do części I →</b></a>
+        <a href="#/praktyka"><span>02</span><h2>Praktyka</h2><p>Od hipotezy do raportu: wybór testu, parametry, narzędzia i kompletne przykłady analiz.</p><b>Wejdź do części II →</b></a>
+      </div>
+    </section>
+
+    <section class="route" data-route="podstawy">
+      <div class="section-hero"><div><span class="kicker">Część I</span><h1>Podstawy<br>bez żargonu</h1></div><p>Najpierw sens decyzji, potem matematyka. Pięć krótkich rozdziałów, które pozwolą Ci świadomie zaplanować analizę.</p></div>
+      <div class="subnav" aria-label="Rozdziały podstaw"><a href="#/podstawy/po-co">Po co?</a><a href="#/podstawy/definicje">Przystępne definicje</a><a href="#/podstawy/wytyczne">Wytyczne</a><a href="#/podstawy/narzedzia">Narzędzia</a><a href="#/podstawy/nie-rob">Czego nie robić?</a></div>
+      <article id="po-co" class="content-block"><header><span>01</span><h2>Po co?</h2></header><div class="article-grid"><div><p class="big-copy">Analiza mocy wykonywana <em>przed badaniem</em> odpowiada na jedno praktyczne pytanie: jak duża próba da rozsądną szansę wykrycia efektu, który naprawdę ma znaczenie?</p><p>Chroni czas uczestników i badacza. Pozwala także uczciwie ocenić, czy planowane badanie może odpowiedzieć na postawione pytanie — zanim zacznie się rekrutacja.</p></div><div class="callout"><span class="mono">ZASADA</span><strong>Analizę mocy wykonujesz dla konkretnej hipotezy i konkretnego testu, nie „dla badania” jako całości.</strong></div></div></article>
+      <article id="definicje" class="content-block"><header><span>02</span><h2>Przystępne definicje</h2></header><div class="definition-grid">
+        <div id="def-alfa"><small>α · alfa</small><h3>Ryzyko fałszywego alarmu</h3><p>Szansa uznania, że efekt istnieje, choć w populacji go nie ma. Najczęściej ustalana na 0,05.</p></div>
+        <div id="def-beta"><small>β · beta</small><h3>Ryzyko przeoczenia</h3><p>Szansa, że test nie wykryje efektu, który rzeczywiście występuje.</p></div>
+        <div id="def-moc"><small>1 − β</small><h3>Moc statystyczna</h3><p>Szansa wykrycia założonego efektu. 0,80 to zwyczajowe minimum; 0,90 lub 0,95 daje większą ochronę.</p></div>
+        <div id="def-efekt"><small>r · d · f · f²</small><h3>Wielkość efektu</h3><p>Miara siły związku lub różnicy, niezależna od skali pomiaru. To ona najmocniej wpływa na wymagane N.</p></div>
+      </div><div class="matrix"><div></div><b>Efekt istnieje</b><b>Efektu nie ma</b><b>Wynik istotny</b><span class="good">✓ wykrycie (moc)</span><span>× błąd I rodzaju (α)</span><b>Wynik nieistotny</b><span>× błąd II rodzaju (β)</span><span class="good">✓ poprawna decyzja</span></div></article>
+      <article id="wytyczne" class="content-block"><header><span>03</span><h2>Jaką wielkość efektu przyjąć?</h2></header><ol class="priority-list"><li><div><b>Najlepiej</b><h3>Metaanaliza lub bardzo podobne badania</h3><p>Sprawdź zgodność populacji, procedury i miary. Uwzględnij niepewność oraz możliwe zawyżenie efektów w małych publikowanych próbach.</p></div></li><li><div><b>Świadomie</b><h3>SESOI — najmniejszy efekt mający znaczenie</h3><p>Ustal granicę znaczenia teoretycznego, praktycznego lub klinicznego i zaprojektuj badanie tak, by mogło ją wykryć.</p></div></li><li><div><b>Awaryjnie</b><h3>Konwencje Cohena</h3><p>Używaj dopiero, gdy brakuje lepszych danych. „Mały” i „duży” są etykietami zależnymi od dziedziny, nie prawami natury.</p></div></li></ol><div class="effect-table"><div><b>Miara</b><b>mały</b><b>średni</b><b>duży</b></div><div><span>r · korelacja</span><span>0,10</span><span>0,30</span><span>0,50</span></div><div><span>d · dwie średnie</span><span>0,20</span><span>0,50</span><span>0,80</span></div><div><span>f · ANOVA</span><span>0,10</span><span>0,25</span><span>0,40</span></div><div><span>f² · regresja</span><span>0,02</span><span>0,15</span><span>0,35</span></div></div></article>
+      <article id="narzedzia" class="content-block"><header><span>04</span><h2>Dostępne narzędzia</h2></header><div class="tool-list"><div><b>G*Power</b><p>Korelacje, testy t, ANOVA i regresja. Dobry punkt startu dla większości klasycznych schematów.</p><span>desktop · bezpłatny</span></div><div><b>jamovi + PAMLj</b><p>Analiza mocy bez opuszczania środowiska analizy danych; przydatna również w SEM.</p><span>desktop · bezpłatny</span></div><div><b>Monte Carlo Power Analysis</b><p>Symulacyjna analiza mediacji — szczególnie gdy efekt pośredni będzie oceniany przedziałem ufności.</p><span>web</span></div><div><b>pwrSEM / semPower</b><p>Dla konkretnych parametrów lub globalnego dopasowania w modelach równań strukturalnych.</p><span>web / R</span></div></div></article>
+      <article id="nie-rob" class="content-block danger"><header><span>05</span><h2>Czego nie robić?</h2></header><div class="dont-grid"><p><b>Nie licz „obserwowanej mocy”.</b><br>Po badaniu pokaż efekt i przedział ufności; moc wyliczona z uzyskanego efektu powtarza informację z wartości p.</p><p><b>Nie zawyżaj efektu, by zmniejszyć N.</b><br>Osiągalny wynik kalkulatora nie zastępuje realistycznego założenia.</p><p><b>Nie stosuj reguł kciuka.</b><br>„30 osób na grupę” czy „200 do SEM” nie uwzględnia hipotezy, modelu ani oczekiwanego efektu.</p><p><b>Nie myl testów.</b><br>Moc modelu regresji to nie moc pojedynczego predyktora; test omnibus ANOVA to nie konkretne porównanie.</p></div></article>
+    </section>
+
+    <section class="route" data-route="praktyka">
+      <div class="section-hero inverse"><div><span class="kicker">Część II</span><h1>Od hipotezy<br>do liczby N</h1></div><p>Procedura dla studentów i prowadzących — z decyzjami, które trzeba zapisać, oraz gotowymi przykładami raportowania.</p></div>
+      <div class="audience-switch" role="group" aria-label="Wybierz perspektywę"><button class="active" data-audience="student">Dla studentów</button><button data-audience="teacher">Dla prowadzących</button></div>
+      <div id="audience-note" class="audience-note"></div>
+      <article id="procedura" class="content-block"><header><span>01</span><h2>Procedura krok po kroku</h2></header><div class="steps">
+        <section><i>1</i><div><h3>Sformułuj hipotezę</h3><p>Wskaż główny efekt i test, który go sprawdzi. Oddziel analizy konfirmacyjne od eksploracyjnych.</p></div></section>
+        <section><i>2</i><div><h3>Uzasadnij <a class="term" data-term="efekt" href="#/podstawy/definicje">wielkość efektu</a></h3><p>Użyj metaanalizy, podobnych badań lub SESOI. Zapisz źródło i tok rozumowania.</p></div></section>
+        <section><i>3</i><div><h3>Ustal parametry</h3><p>Określ <a class="term" data-term="alfa" href="#/podstawy/definicje">poziom α</a>, docelową <a class="term" data-term="moc" href="#/podstawy/definicje">moc testu</a>, kierunek testu, liczby grup/predyktorów i ewentualną korektę wielokrotnego testowania.</p></div></section>
+        <section><i>4</i><div><h3>Dobierz narzędzie i policz N</h3><p>Upewnij się, że opcja kalkulatora odpowiada dokładnie późniejszej analizie. Policz N osobno dla każdej głównej hipotezy.</p></div></section>
+        <section><i>5</i><div><h3>Wybierz najbardziej wymagający wariant</h3><p>Badanie powinno zapewniać moc hipotezie wymagającej największej próby — nie tej najłatwiejszej.</p></div></section>
+        <section><i>6</i><div><h3>Dodaj uzasadniony zapas</h3><p>Przy przewidywanej utracie u, rekrutuj <span class="formula">N<sub>rekrutacja</sub> = N / (1 − u)</span>. Dla N = 200 i utraty 15%: 236 osób, nie 230.</p></div></section>
+        <section><i>7</i><div><h3>Zapisz i zaraportuj</h3><p>Podaj program i wersję, typ analizy, efekt z uzasadnieniem, α, moc, parametry testu, wynikowe N oraz założony zapas.</p></div></section>
+      </div></article>
+      <article class="content-block"><header><span>02</span><h2>Mapa schematów</h2></header><div class="schema-grid"><button data-schema="corr"><b>Korelacja</b><span>Dwie zmienne ciągłe</span></button><button data-schema="tind"><b>Test t niezależny</b><span>Dwie różne grupy</span></button><button data-schema="tdep"><b>Test t zależny</b><span>Dwa pomiary tych samych osób</span></button><button data-schema="anova"><b>ANOVA</b><span>Trzy lub więcej średnich</span></button><button data-schema="reg"><b>Regresja</b><span>Model lub przyrost R²</span></button><button data-schema="mod"><b>Moderacja</b><span>Interakcja X × W</span></button><button data-schema="med"><b>Mediacja</b><span>Efekt pośredni a × b</span></button><button data-schema="sem"><b>SEM</b><span>Ścieżka lub dopasowanie</span></button></div><div id="schema-detail" class="schema-detail" aria-live="polite"></div></article>
+      <article class="content-block calculator"><header><span>03</span><h2>Szybki kalkulator orientacyjny</h2></header><div class="calc-grid"><div><label>Typ analizy<select id="calc-type"><option value="corr">Korelacja Pearsona</option><option value="t">Test t, dwie równe grupy</option></select></label><label>Zakładany efekt<input id="effect" type="number" min="0.01" max="0.99" step="0.01" value="0.20"><small id="effect-hint">|r|</small></label><label>Poziom α<input id="alpha" type="number" min="0.001" max="0.20" step="0.001" value="0.05"></label><label>Docelowa moc<select id="power"><option value="0.80">0,80</option><option value="0.90" selected>0,90</option><option value="0.95">0,95</option></select></label><button class="button primary" id="calculate">Oblicz orientacyjne N</button></div><div class="result"><span>Wymagana próba</span><strong id="calc-result">258</strong><p id="calc-caption">osób łącznie · test dwustronny</p><small>Wynik przybliżony. Ostateczną wartość sprawdź w G*Power lub innym narzędziu odpowiadającym analizie.</small></div></article>
+      <article class="content-block examples"><header><span>04</span><h2>Przykłady gotowych analiz</h2></header><div class="example-tabs"><button class="active" data-example="corr">Korelacja</button><button data-example="groups">Dwie grupy</button><button data-example="reg">Regresja</button><button data-example="sens">Wrażliwość</button></div><div id="example-content"></div></article>
+      <article class="content-block checklist"><header><span>05</span><h2>Lista kontrolna przed rekrutacją</h2></header><div id="checklist-items"></div><button class="text-button" id="reset-checklist">Wyczyść zaznaczenia</button></article>
+    </section>
+  </main>
+  <footer><a class="brand" href="#/start"><span class="brand-mark">N</span><span>Obliczanie N</span></a><p>Prototyp edukacyjny na podstawie poradnika „Jak duża powinna być moja próba?” (2026).</p><a href="#/podstawy/nie-rob">Zasady odpowiedzialnego planowania ↑</a></footer>
+  <div id="tooltip" role="tooltip" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
